@@ -1,0 +1,3 @@
+username = "ENTER YOUR PostgreSQL USERNAME HERE"
+
+password = "ENTER YOUR PostgreSQL PASSWORD HERE"
