@@ -82,8 +82,8 @@ WHERE first_name LIKE 'Hercules' AND last_name LIKE 'B%';
 -- -------------------------------------------
 -- 6. List each employee in the Sales department, including their employee number, last name, and first name.
 CREATE TABLE analysis_6(
-	dept_name VARCHAR PRIMARY KEY,
-	emp_no INT,
+	dept_name VARCHAR,
+	emp_no INT PRIMARY KEY,
 	last_name VARCHAR,
 	first_name VARCHAR);
 
@@ -99,8 +99,8 @@ WHERE dept_name LIKE 'Sales';
 -- -------------------------------------------
 -- 7. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
 CREATE TABLE analysis_7(
-	dept_name VARCHAR PRIMARY KEY,
-	emp_no INT,
+	dept_name VARCHAR,
+	emp_no INT PRIMARY KEY,
 	last_name VARCHAR,
 	first_name VARCHAR);
 
