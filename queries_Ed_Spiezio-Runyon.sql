@@ -11,12 +11,12 @@ DROP TABLE analysis_7;
 -- -------------------------------------------
 -- 1. List the employee number, last name, first name, sex, and salary of each employee.
 CREATE TABLE analysis_1(
-	emp_no INT PRIMARY KEY,
+	emp_no INT,
 	last_name VARCHAR,
 	first_name VARCHAR,
 	sex VARCHAR,
-	salary INT);
-
+	salary INT
+);
 SELECT * FROM analysis_1;
 
 -- Perform an inner join on tables for analysis_1.
@@ -33,11 +33,12 @@ WHERE hire_date LIKE '%1986'
 -- -------------------------------------------
 -- 3. List the manager of each department along with their department number, department name, employee number, last name, and first name.
 CREATE TABLE analysis_3(
-	emp_no INT PRIMARY KEY,
+	emp_no INT,
 	dept_no VARCHAR,
 	dept_name VARCHAR,
 	last_name VARCHAR,
-	first_name VARCHAR);
+	first_name VARCHAR
+);
 
 SELECT * FROM analysis_3;
 
@@ -51,12 +52,12 @@ WHERE emp_title LIKE 'm0001'
 -- -------------------------------------------
 -- 4. List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
 CREATE TABLE analysis_4(
-	dept_no VARCHAR PRIMARY KEY,
+	dept_no VARCHAR,
 	emp_no INT,
 	last_name VARCHAR,
 	first_name VARCHAR,
-	dept_name VARCHAR);
-
+	dept_name VARCHAR
+);
 SELECT * FROM analysis_4;
 
 -- Perform inner join on tables for analysis_4.
@@ -68,10 +69,10 @@ INNER JOIN employees ON employees.emp_no=dept_emp.emp_no
 -- -------------------------------------------
 -- 5. List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
 CREATE TABLE analysis_5(
-	first_name VARCHAR PRIMARY KEY,
+	first_name VARCHAR,
 	last_name VARCHAR,
-	sex VARCHAR);
-
+	sex VARCHAR
+);
 SELECT * FROM analysis_5;
 
 -- Select and list data based on requested criteria for first_name and last_name.
@@ -83,10 +84,10 @@ WHERE first_name LIKE 'Hercules' AND last_name LIKE 'B%';
 -- 6. List each employee in the Sales department, including their employee number, last name, and first name.
 CREATE TABLE analysis_6(
 	dept_name VARCHAR,
-	emp_no INT PRIMARY KEY,
+	emp_no INT,
 	last_name VARCHAR,
-	first_name VARCHAR);
-
+	first_name VARCHAR
+);
 SELECT * FROM analysis_6;
 
 -- Perform inner join on tables for analysis_6.
@@ -100,10 +101,10 @@ WHERE dept_name LIKE 'Sales';
 -- 7. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
 CREATE TABLE analysis_7(
 	dept_name VARCHAR,
-	emp_no INT PRIMARY KEY,
+	emp_no INT,
 	last_name VARCHAR,
-	first_name VARCHAR);
-
+	first_name VARCHAR
+);
 SELECT * FROM analysis_7;
 
 -- Perform inner join on tables for analysis_6.
